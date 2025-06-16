@@ -12,6 +12,7 @@ export default function Navigation() {
                 <Toolbar sx={{
                     display: "flex",
                     justifyContent: "space-between",
+                    marginInline: "2rem"
                 }}>
                     <Typography component="div" sx={{
                         fontFamily: 'var(--font-nunito-sans), sans-serif',

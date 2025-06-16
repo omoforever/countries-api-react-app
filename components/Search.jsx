@@ -5,7 +5,7 @@ export default function Search() {
     return (
         <Box
             component="form"
-            sx={{ '& > :not(style)': { m: 1, maxWidth: "50ch" } }}
+            sx={{ width: "20rem", maxWidth: "100%" }}
             noValidate
             autoComplete="off"
         >

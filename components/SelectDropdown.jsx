@@ -16,7 +16,7 @@ export default function SelectDropdown() {
     };
 
     return (
-        <Box sx={{ m: 1, minWidth: "25ch" }}>
+        <Box sx={{ minWidth: "25ch" }}>
             <FormControl fullWidth>
                 <InputLabel id="demo-simple-select-label">Age</InputLabel>
                 <Select

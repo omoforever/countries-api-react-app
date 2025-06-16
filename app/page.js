@@ -7,18 +7,17 @@ export default function Home() {
   return (
     <>
       <Navigation />
-
       <Box sx={{
         display: "flex",
         justifyContent: "space-between",
+        gap: "1rem",
         flexWrap: "wrap",
-        margin: "1rem",
+        marginBlock: "2rem",
+        marginInline: "4rem",
       }}>
         <Search />
         <SelectDropdown />
       </Box>
-
     </>
-
   );
 }

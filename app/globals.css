@@ -34,3 +34,7 @@
   --min-screen-width: 320px;
   /* For WCAG-responsive testing */
 }
+
+body {
+  background-color: var(--color-grey-50);
+}
