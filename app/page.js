@@ -1,3 +1,5 @@
+import Cards from "@/components/Cards";
+import CountryCard from "@/components/CountryCard";
 import Navigation from "@/components/Navigation";
 import Search from "@/components/Search";
 import SelectDropdown from "@/components/SelectDropdown";
@@ -18,6 +20,12 @@ export default function Home() {
         <Search />
         <SelectDropdown />
       </Box>
+      <Box sx={{
+        marginInline: "4rem"
+      }}>
+        <CountryCard />
+      </Box>
+
     </>
   );
 }

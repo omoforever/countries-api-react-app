@@ -9,26 +9,28 @@ import Select from '@mui/material/Select';
 
 export default function SelectDropdown() {
 
-    const [age, setAge] = React.useState('');
+    const [region, setRegion] = React.useState('');
 
     const handleChange = (event) => {
-        setAge(event.target.value);
+        setRegion(event.target.value);
     };
 
     return (
         <Box sx={{ minWidth: "25ch" }}>
             <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Age</InputLabel>
+                <InputLabel id="demo-simple-select-label">Filter by Region</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
-                    value={age}
-                    label="Age"
+                    value={region}
+                    label="Region"
                     onChange={handleChange}
                 >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value={"Africa"}>Africa</MenuItem>
+                    <MenuItem value={"America"}>America</MenuItem>
+                    <MenuItem value={"Asia"}>Asia</MenuItem>
+                    <MenuItem value={"Europe"}>Europe</MenuItem>
+                    <MenuItem value={"Oceania"}>Oceania</MenuItem>
                 </Select>
             </FormControl>
         </Box>);
