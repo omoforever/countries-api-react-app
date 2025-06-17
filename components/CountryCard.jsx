@@ -3,10 +3,30 @@ import Cards from "@/components/Cards";
 import { Box } from "@mui/system";
 
 
-export default function CountryCard() {
+export default function CountryCard({ search, region }) {
     const countries = data;
+    let filteredCountries = null;
 
-    const countryCards = countries.map((country, index) => (
+    if (!search && !region) {
+        filteredCountries = countries;
+    } else if (search && region) {
+        filteredCountries = countries.filter(
+            country =>
+                country.region === region &&
+                country.name.toLowerCase().includes(search.toLowerCase())
+        );
+    } else if (search) {
+        filteredCountries = countries.filter(
+            country => country.name.toLowerCase().includes(search.toLowerCase())
+        );
+    } else if (region) {
+        filteredCountries = countries.filter(
+            country => country.region === region
+        );
+    }
+
+
+    const countryCards = filteredCountries.map((country, index) => (
         <Cards key={index} flag={country.flags.svg} name={country.name} population={country.population}
             region={country.region} capital={country.capital} />
     ))

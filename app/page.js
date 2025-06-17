@@ -12,8 +12,8 @@ export default function Home() {
   const [search, setSearch] = React.useState("");
   const [region, setRegion] = React.useState("");
 
-  console.log("search:", search);
-  console.log("region", region)
+  // console.log("search:", search);
+  // console.log("region", region)
 
   return (
     <>
