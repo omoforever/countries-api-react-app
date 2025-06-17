@@ -1,3 +1,5 @@
+'use client'
+import React from 'react'
 import Cards from "@/components/Cards";
 import CountryCard from "@/components/CountryCard";
 import Navigation from "@/components/Navigation";
@@ -6,6 +8,13 @@ import SelectDropdown from "@/components/SelectDropdown";
 import { Box } from "@mui/material";
 
 export default function Home() {
+
+  const [search, setSearch] = React.useState("");
+  const [region, setRegion] = React.useState("");
+
+  console.log("search:", search);
+  console.log("region", region)
+
   return (
     <>
       <Navigation />
@@ -17,13 +26,13 @@ export default function Home() {
         marginBlock: "2rem",
         marginInline: "4rem",
       }}>
-        <Search />
-        <SelectDropdown />
+        <Search search={search} setSearch={setSearch} />
+        <SelectDropdown region={region} setRegion={setRegion} />
       </Box>
       <Box sx={{
         marginInline: "4rem"
       }}>
-        <CountryCard />
+        <CountryCard search={search} region={region} />
       </Box>
 
     </>

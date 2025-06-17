@@ -7,13 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SelectDropdown() {
-
-    const [region, setRegion] = React.useState('');
-
-    const handleChange = (event) => {
-        setRegion(event.target.value);
-    };
+export default function SelectDropdown({ region, setRegion }) {
 
     return (
         <Box sx={{ minWidth: "25ch" }}>
@@ -23,8 +17,8 @@ export default function SelectDropdown() {
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={region}
-                    label="Region"
-                    onChange={handleChange}
+                    label="Filter by Region"
+                    onChange={(e) => setRegion(e.target.value)}
                 >
                     <MenuItem value={"Africa"}>Africa</MenuItem>
                     <MenuItem value={"America"}>America</MenuItem>
