@@ -1,6 +1,7 @@
 import data from "@/data.json";
 import Cards from "@/components/Cards";
 import { Box } from "@mui/system";
+import Link from "next/link";
 
 
 export default function CountryCard({ search, region }) {
@@ -27,8 +28,10 @@ export default function CountryCard({ search, region }) {
 
 
     const countryCards = filteredCountries.map((country, index) => (
-        <Cards key={index} flag={country.flags.svg} name={country.name} population={country.population}
-            region={country.region} capital={country.capital} />
+        <Link href={`/country/${country.name}`}>
+            <Cards key={index} flag={country.flags.svg} name={country.name} population={country.population}
+                region={country.region} capital={country.capital} />
+        </Link>
     ))
 
     return (
