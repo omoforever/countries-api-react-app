@@ -28,8 +28,8 @@ export default function CountryCard({ search, region }) {
 
 
     const countryCards = filteredCountries.map((country, index) => (
-        <Link href={`/country/${country.name}`}>
-            <Cards key={index} flag={country.flags.svg} name={country.name} population={country.population}
+        <Link key={index} href={`/country/${country.name}`}>
+            <Cards flag={country.flags.svg} name={country.name} population={country.population}
                 region={country.region} capital={country.capital} />
         </Link>
     ))

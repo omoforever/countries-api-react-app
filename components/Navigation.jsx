@@ -4,6 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import ContrastIcon from '@mui/icons-material/Contrast';
+import Link from 'next/link';
 
 export default function Navigation() {
     return (
@@ -19,7 +20,9 @@ export default function Navigation() {
                         fontWeight: 800,
                         fontSize: "1.5rem"
                     }}>
-                        Where in the world?
+                        <Link href="/">
+                            Where in the world?
+                        </Link>
                     </Typography>
                     <Button color="inherit" sx={{
                         display: "flex",
