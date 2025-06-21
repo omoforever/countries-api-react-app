@@ -75,7 +75,7 @@ export default async function Page({ params }) {
                                 gap: "0.5rem"
                             }}>
                                 <Typography>Native Name: {countryData.nativeName}</Typography>
-                                <Typography>Population: {countryData.population}</Typography>
+                                <Typography>Population: {countryData.population.toLocaleString()}</Typography>
                                 <Typography>Region: {countryData.region}</Typography>
                                 <Typography>Sub Region: {countryData.subregion}</Typography>
                                 <Typography>Capital: {countryData.capital}</Typography>

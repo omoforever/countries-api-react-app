@@ -22,7 +22,10 @@ export default function Cards({ flag, name, population, region, capital }) {
                     src={flag}
                     alt={`${name} flag`}
                     fill
-                    style={{ objectFit: 'fit' }}
+                    sizes="(min-width: 808px) 50vw, 100vw"
+                    style={{
+                        objectFit: 'cover', // cover, contain, none
+                    }}
                 />
             </Box>
             <CardContent sx={{
@@ -46,7 +49,7 @@ export default function Cards({ flag, name, population, region, capital }) {
                         fontFamily: 'var(--font-nunito-sans), sans-serif',
                         fontWeight: 600
                     }}>
-                        <span>Population</span>: {population}
+                        <span>Population</span>: {population.toLocaleString()}
                     </Typography>
                     <Typography sx={{
                         fontFamily: 'var(--font-nunito-sans), sans-serif',
